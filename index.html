@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111318">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Loop Player">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>YouTube Loop Player</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+  <h1>YouTube Loop Player <small>web v1.0</small></h1>
+  <label class="toggle"><input id="loop" type="checkbox" checked><span>播放清單循環</span></label>
+  <label class="toggle"><input id="wake" type="checkbox" checked><span>播放時保持螢幕不關閉</span></label>
+  <section><h2>播放清單</h2><div id="list"></div><button id="add" class="secondary" type="button">＋ 新增播放清單</button></section>
+  <div class="actions"><button id="save" class="secondary" type="button">儲存設定</button><button id="start" class="primary" type="button">▶ 開始輪播</button></div>
+  <button id="stop" class="stop" type="button">■ 停止輪播</button>
+  <p id="status" role="status"></p>
+  <div id="playerWrap" class="player" hidden><div id="player"></div></div>
+  <p class="hint">請貼上包含 <code>list=</code> 的 YouTube 播放清單連結(或直接貼清單 ID)。手機瀏覽器第一次需要手動按一下播放器的播放鍵;部分影片不允許嵌入播放,會自動跳過。</p>
+</main><script src="app.js"></script></body>
+</html>
